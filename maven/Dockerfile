@@ -5,4 +5,3 @@ COPY settings.xml /root/.m2/settings.xml
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean install
-RUN mvn clean package tomcat7:deploy
