@@ -4,4 +4,4 @@ WORKDIR /app
 #RUN tar -xvf apache-tomcat-9.0.118.tar.gz
 #RUN mv apache-tomcat-9.0.118/ tomcat
 WORKDIR /app/tomcat/bin
-CMD ["/tomcat/bin/catalina.sh", "run"]
+CMD ["catalina.sh", "run"]
