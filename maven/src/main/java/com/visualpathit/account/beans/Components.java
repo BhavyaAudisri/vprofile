@@ -1,4 +1,4 @@
-package com.visualpathit.account.beans;
+/* package com.visualpathit.account.beans;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -15,7 +15,7 @@ public class Components {
 	@Value("${memcached.standBy.port}")
     private String standByPort;
 	
-	@Value("${rabbitmq.address}")
+	// @Value("${rabbitmq.address}")
     private String rabbitMqHost;
 	@Value("${rabbitmq.port}")
     private String rabbitMqPort;
@@ -108,4 +108,36 @@ public class Components {
 	}
 	
 	
+} */
+
+
+package com.visualpathit.account.beans;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Components {
+
+    // ONLY MYSQL RELATED (if needed later via properties)
+    @Value("${jdbc.url:jdbc:mysql://localhost:3306/accounts}")
+    private String dbUrl;
+
+    @Value("${jdbc.username:admin}")
+    private String dbUser;
+
+    @Value("${jdbc.password:admin123}")
+    private String dbPassword;
+
+    public String getDbUrl() {
+        return dbUrl;
+    }
+
+    public String getDbUser() {
+        return dbUser;
+    }
+
+    public String getDbPassword() {
+        return dbPassword;
+    }
 }
