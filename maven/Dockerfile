@@ -3,4 +3,5 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean install
- 
+RUN mkdir -p /root/.m2
+COPY settings.xml /root/.m2/settings.xml
